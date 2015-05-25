@@ -9,7 +9,7 @@
 							<div ng-show="!work.status" class='drop-box'>
 								<img src="/img/drag-drop.png" style="">
 								<div class="instructions">
-									<div><h4>drag & drop</h4><br>your image here or <span style="text-decoration: underline">browse</span></div>
+									<div><h4>drag &amp; drop</h4><br>your image here or <span style="text-decoration: underline">browse</span></div>
 								</div>
 							</div>
 						</div>
@@ -65,9 +65,20 @@
 					<div class='uibox'>
 						<div class="title">Locations</div>
 						<div class="world-map"></div>
-						<table class="device-stats">
+						<table class="device-stats f16">
 							<tr><th>Location</th><th>Devices</th></tr>
-							<tr ng-repeat="(countryState, device in countryDevices)" class="content f16">
+							<tr class="content f16">
+								<td><span class="flag us"></span>Alaska, USA</td><td>6</td>
+							</tr>
+							<tr class="content f16">
+								<td><span class="flag in"></span>India</td><td>6</td>
+							</tr>
+							<tr class="content f16">
+								<td><span class="flag us"></span>Alaska, USA</td><td>6</td>
+							</tr>
+
+							</tr>
+							<tr ng-repeat="(countryState, device) in countryDevices" class="content">
 								<td><span class="flag {{device.country | lowercase}}"></span>{{countryState}}</td><td>{{device.count}}</td>
 							</tr>
 						</table>
